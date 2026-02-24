@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Survei ZOLVEX Turbo Mistic Violet</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; -webkit-tap-highlight-color: transparent; }
+        .star-rating button { transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+        .star-rating button:active { transform: scale(1.5); }
+        select { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%2394a3b8' stroke-width='3'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M19 9l-7 7-7-7'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 1rem center; background-size: 1rem; }
+    </style>
+</head>
+<body class="bg-[#F1F5F9] min-h-screen">
+
+    <!-- Premium Header ZOLVEX -->
+    <div class="bg-[#0056b3] pt-12 pb-24 px-6 rounded-b-[3rem] shadow-2xl relative overflow-hidden text-center">
+        <div class="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full -mr-20 -mt-20 blur-3xl"></div>
+        <div class="absolute bottom-0 left-0 w-48 h-48 bg-blue-400/10 rounded-full -ml-10 -mb-10 blur-2xl"></div>
+        
+        <div class="max-w-md mx-auto relative z-10">
+            <h1 class="text-4xl font-black text-white tracking-tighter italic uppercase">ZOLVEX <span class="text-blue-300">TURBO</span></h1>
+            <p class="text-blue-100 text-[10px] font-bold tracking-[0.4em] uppercase mt-1">Liquid Detergent Concentrate</p>
+            <div class="flex items-center justify-center gap-3 mt-4">
+                <div class="h-[1px] w-8 bg-blue-300/50"></div>
+                <span class="text-[9px] font-black text-white/80 uppercase tracking-widest italic">Membersihkan Noda & Merawat Pakaian</span>
+                <div class="h-[1px] w-8 bg-blue-300/50"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Card Container -->
+    <div class="max-w-md mx-auto px-5 -mt-14 relative z-20 pb-12">
+        <div class="bg-white rounded-[2.5rem] shadow-[0_20px_50px_rgba(0,86,179,0.15)] border border-white p-8 space-y-8">
+            
+            <div class="text-center space-y-1">
+                <h2 class="text-xl font-extrabold text-slate-800">Formulir Survei Kepuasan</h2>
+                <p class="text-slate-400 text-xs font-medium uppercase tracking-wider italic">ZOLVEX Turbo MISTIC VIOLET - Batch 3</p>
+            </div>
+
+            <form id="waSurveyForm" class="space-y-6">
+                <!-- Identitas -->
+                <div class="space-y-4">
+                    <div class="group">
+                        <label class="text-[13px] font-bold text-slate-800 uppercase tracking-wide ml-1 mb-1 block">Nama Lengkap:</label>
+                        <input type="text" name="nama" required placeholder="Ketik nama Anda..." 
+                               class="w-full bg-slate-50 border-2 border-transparent focus:border-blue-500 focus:bg-white rounded-2xl px-5 py-4 outline-none transition-all font-bold text-slate-700 shadow-sm">
+                    </div>
+
+                    <div class="group">
+                        <label class="text-[13px] font-bold text-slate-800 uppercase tracking-wide ml-1 mb-1 block">Nomor WhatsApp:</label>
+                        <input type="tel" name="whatsapp" required placeholder="Contoh: 0877xxxxxxxx" 
+                               class="w-full bg-slate-50 border-2 border-transparent focus:border-blue-500 focus:bg-white rounded-2xl px-5 py-4 outline-none transition-all font-bold text-slate-700 shadow-sm">
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-3">
+                        <div>
+                            <label class="text-[13px] font-bold text-slate-800 uppercase tracking-wide ml-1 mb-1 block">Ukuran Sabun:</label>
+                            <select name="ukuran" required class="w-full bg-slate-50 border-2 border-transparent focus:border-blue-500 rounded-xl px-4 py-4 outline-none font-bold text-slate-600 appearance-none shadow-sm cursor-pointer">
+                                <option value="">Pilih...</option>
+                                <option value="Sampel">Kemasan Sampel</option>
+                                <option value="500ml">500ml</option>
+                                <option value="1 liter">1 Liter</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="text-[13px] font-bold text-slate-800 uppercase tracking-wide ml-1 mb-1 block">Kegunaan ZOLVEX:</label>
+                            <select name="penggunaan" required class="w-full bg-slate-50 border-2 border-transparent focus:border-blue-500 rounded-xl px-4 py-4 outline-none font-bold text-slate-600 appearance-none shadow-sm cursor-pointer">
+                                <option value="">Tujuan Cuci</option>
+                                <option value="Bersihkan daki (kerah & ketiak)">Bersih Daki</option>
+                                <option value="Cuci biasa">Cuci Biasa</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hasil & Saran -->
+                <div class="space-y-4">
+                    <div class="group">
+                        <label class="text-[13px] font-bold text-slate-800 uppercase tracking-wide ml-1 mb-1 block">Hasilnya:</label>
+                        <textarea name="hasilnya" required rows="2" placeholder="Apa hasil yang Anda rasakan?" 
+                                  class="w-full bg-slate-50 border-2 border-transparent focus:border-blue-500 focus:bg-white rounded-2xl px-5 py-4 outline-none transition-all font-bold text-slate-700 resize-none shadow-sm"></textarea>
+                    </div>
+
+                    <div class="group">
+                        <label class="text-[13px] font-bold text-slate-800 uppercase tracking-wide ml-1 mb-1 block">Kritik & Saran:</label>
+                        <textarea name="saran" required rows="2" placeholder="Masukan untuk CleanShineX..." 
+                                  class="w-full bg-slate-50 border-2 border-transparent focus:border-blue-500 focus:bg-white rounded-2xl px-5 py-4 outline-none transition-all font-bold text-slate-700 resize-none shadow-sm"></textarea>
+                    </div>
+                </div>
+
+                <!-- Rating Bintang -->
+                <div class="pt-2 flex flex-col items-center">
+                    <label class="text-[13px] font-bold text-slate-800 uppercase tracking-widest mb-4 block">Berikan Rating Produk</label>
+                    <div class="flex gap-2" id="starContainer">
+                        <button type="button" data-val="1" class="star-btn"><svg class="w-10 h-10" viewBox="0 0 24 24" fill="#e2e8f0"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></button>
+                        <button type="button" data-val="2" class="star-btn"><svg class="w-10 h-10" viewBox="0 0 24 24" fill="#e2e8f0"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></button>
+                        <button type="button" data-val="3" class="star-btn"><svg class="w-10 h-10" viewBox="0 0 24 24" fill="#e2e8f0"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></button>
+                        <button type="button" data-val="4" class="star-btn"><svg class="w-10 h-10" viewBox="0 0 24 24" fill="#e2e8f0"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></button>
+                        <button type="button" data-val="5" class="star-btn"><svg class="w-10 h-10" viewBox="0 0 24 24" fill="#e2e8f0"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></button>
+                    </div>
+                    <input type="hidden" name="rating" id="ratingValue" required>
+                    <p id="starAlert" class="hidden text-[10px] text-red-500 mt-2 font-bold uppercase tracking-tighter italic animate-pulse">*Wajib Pilih Bintang Dahulu</p>
+                </div>
+
+                <!-- WhatsApp Button -->
+                <button type="submit" class="w-full bg-[#25D366] hover:bg-[#20ba59] text-white font-black py-5 rounded-[2rem] text-xl shadow-xl transition-all active:scale-95 flex items-center justify-center gap-3 tracking-tighter">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 1 1-7.6-11.7l.1 0"/><path d="M17.4 15.3l1.3-1.3q.4-.4.4-1t-.4-1l-2.1-2.1q-.4-.4-1-.4t-1 .4l-1.3 1.3"/><path d="M22 2l-5 5"/></svg>
+                    KIRIM SURVEI
+                </button>
+            </form>
+        </div>
+
+        <!-- Footer Branding -->
+        <div class="mt-8 text-center space-y-2 opacity-60">
+            <p class="text-[10px] font-black text-slate-500 uppercase tracking-[0.3em]">CLEANSHINEX - Clean, Shine & Protect</p>
+            <p class="text-[8px] font-bold text-slate-400 uppercase tracking-widest">Original Formula By: CleanShineX ©2026</p>
+        </div>
+    </div>
+
+    <script>
+        const ADMIN_WA = "6287793826761";
+        const starBtns = document.querySelectorAll('.star-btn');
+        const ratingInput = document.getElementById('ratingValue');
+        const starAlert = document.getElementById('starAlert');
+        const form = document.getElementById('waSurveyForm');
+        let currentRating = 0;
+
+        starBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                currentRating = parseInt(btn.getAttribute('data-val'));
+                ratingInput.value = currentRating;
+                starAlert.classList.add('hidden');
+                starBtns.forEach(b => {
+                    const bVal = parseInt(b.getAttribute('data-val'));
+                    const svg = b.querySelector('svg');
+                    svg.style.fill = bVal <= currentRating ? "#facc15" : "#e2e8f0";
+                });
+            });
+        });
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            if (currentRating === 0) {
+                starAlert.classList.remove('hidden');
+                return;
+            }
+            const data = new FormData(this);
+            const stars = "⭐".repeat(currentRating);
+            const message = `*SURVEI ZOLVEX TURBO (MISTIC VIOLET)*%0A--------------------------%0A*Nama:* ${data.get('nama')}%0A*WhatsApp:* ${data.get('whatsapp')}%0A*Ukuran:* ${data.get('ukuran')}%0A*Kegunaan:* ${data.get('penggunaan')}%0A*Hasil:* ${data.get('hasilnya')}%0A*Kritik/Saran:* ${data.get('saran')}%0A*Rating:* ${stars}%0A--------------------------%0A_Sent via Aplikasi Survei - CleanShineX_`;
+            
+            // Pengalihan WhatsApp yang paling stabil
+            const waUrl = `https://wa.me/${ADMIN_WA}?text=${message}`;
+            window.location.assign(waUrl);
+        });
+    </script>
+</body>
+</html>
+
